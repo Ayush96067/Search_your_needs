@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vaishali Nagar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Bebas+Neue&family=DynaPuff&family=Rubik+Burned&family=Rubik+Marker+Hatch&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .container::before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(255, 255, 255) center;
+        z-index: -1;
+        opacity: 0.7;
+      }
+      .container {
+        text-align: center;
+        font-size: 60px;
+      }
+      .container h1 {
+        font-family: "DynaPuff", cursive;
+        color: darkorange;
+      }
+      .small {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        height: 400px;
+      }
+      .btn {
+        margin: 10px;
+      }
+      #Hotel {
+        background: url("hotel.jpg") no-repeat center center/cover;
+      }
+      #Gym {
+        background: url("gym.webp") no-repeat center center/cover;
+      }
+      #Hospitals {
+        background: url("hospitals.jpg") no-repeat center center/cover;
+      }
+
+      #school {
+        background: url("school.webp") no-repeat center center/cover;
+        font-size: 50px;
+        font-weight: 1000;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Vaishali Nagar</h1>
+      <div class="small">
+        <button
+          onclick="window.open('vaishali nagar/hotel.html')"
+          class="btn"
+          id="Hotel"
+        ></button>
+        <button
+          onclick="window.open('vaishali nagar/gym.html')"
+          class="btn"
+          id="Gym"
+        ></button>
+        <button
+          onclick="window.open('vaishali nagar/hospital.html')"
+          class="btn"
+          id="Hospitals"
+        ></button>
+        <button
+          onclick="window.open('vaishali nagar/school.html')"
+          class="btn"
+          id="school"
+        ></button>
+      </div>
+    </div>
+  </body>
+</html>

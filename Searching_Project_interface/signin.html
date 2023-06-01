@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Signin form 
+    </title>
+    <script src="https://kit.fontawesome.com/2895b29360.js" crossorigin="anonymous"></script>
+    
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        
+    .center{
+        content:"";
+        width:100%;
+        height:100vh;
+        z-index: -1;
+        background-image: linear-gradient(rgb(106 41 153),rgb(246 234 104) , rgb(228 71 241));
+    position:absolute;
+    }
+    .text{
+        text-align: center;
+        font-size: 2.8rem;
+    }
+.container
+{   border:2px solid white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color:white;
+    margin:10px;
+    width:30%;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 4px black;
+
+}
+.data{
+    font-weight: bolder;
+   font-size: 35px;
+    /* text-align: center; */
+    padding:10px;
+}
+.forget_pass{
+    position: relative;
+    left: 10%;
+    font-size: 20px;
+}
+.forget_pass a{
+    text-decoration: none;
+    color:rgb(52, 112, 240);
+}
+.forget_pass a:hover{
+    text-decoration: underline;
+}
+   
+.field{
+    width:50%;
+    height:35px;
+    font-size: 30px;
+    /* text-align: center; */
+}
+    
+    
+/*
+#name{
+    position:relative;
+    left:75px;;
+    
+}
+#email{
+    position: relative;
+    left:75px;
+}
+#pass{
+    position: relative;
+    left:50px;
+}
+#phone{
+    position: relative;
+    left:12px;
+}
+#age
+{
+    position: relative;
+    left:95px;
+} */
+
+
+
+
+form .data input{
+    height: 50px;
+    width:100%;
+    border:1px solid rgb(100, 96, 101);
+}
+form .data input:focus{
+    border-color: rgb(34, 74, 207);
+    border-bottom-width: 4px;
+    
+}
+form .btn{
+    cursor: pointer;
+    margin:30px 0;
+    height:45px;
+    width:100%;
+    position: relative;
+    overflow: hidden;
+}
+form .btn .inner{
+    height:100%;
+    width:300%;
+    position: absolute;
+    left:-100%;
+    background:-webkit-linear-gradient( rgb(225, 216, 231),rgb(52, 140, 187) , rgb(46, 225, 202));
+    z-index: -1;
+    transition: all .4s;
+       
+}
+form .btn  button{
+    height:100%;
+    width:100%;
+    background: none;
+    border:none;
+    color:white;
+    font-size: 30px ;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+}
+form .btn:hover .inner{
+    color:black;
+    background: -webkit-linear-gradient(rgb(220, 216, 216), rgb(36, 36, 172));
+    cursor:pointer;
+    
+}
+.signup {
+    text-align: center;
+    font-weight: 200;
+
+}
+.signup a{
+    color:rgb(52, 112, 240);
+    text-decoration: none;
+}
+.signup a:hover{
+    text-decoration: underline;
+}
+.close{
+    position: absolute;
+    margin:10px 10px;
+    right:10px;
+    top:15px;
+    font-weight: bolder;
+    font-size: 30px;
+cursor: pointer;
+background-color: transparent;
+ border:none;  
+}
+.close:hover{
+    color:rgb(52, 112, 240);
+}
+.radio{
+    font-size: 25px;
+    margin: 5px;
+    font-weight: bold;
+}
+.R{
+    width:36px;
+    height:22px;
+}
+
+
+   </style>
+</head>
+<body>
+    <div class="center">
+        <div class="container">
+            
+         <button onclick="location.href='interface.html'" <i class="close fa-solid fa-xmark"></i></button>
+           <script>
+            let btback=document.querySelector('.close');
+            btback.addEventListener('click', () =>
+            {
+                window.history.back();
+            }
+            );
+           </script>
+            <div class="text">
+                Signin Form
+            </div>
+            <form action="#">
+                <div class="data">
+                    <label>Name</label>
+                    <input class="field" id="name" type="text" required placeholder="Name-Rahul">
+                </div>
+                <div class="data">
+                    <label>Age</label>
+                    <input class="field" id="name" type="number" required placeholder="age- 8 yrs">
+                </div>
+                <div class="data">
+                    <label>Email </label>
+                    <input class="field" id="email" type="email" required placeholder="abc123@gmail.com">
+                </div>
+                <div class="data">
+                    <label>Password</label>
+                    <input class="field" id="pass" type="password" required placeholder="password">
+                </div>
+                <div class="data">
+                    <label>D.O.B </label>
+                    <input class="field" id="dob" type="date" required placeholder="07/06/2003">
+                </div>
+                <div class="radio">
+                    Gender:  <input type="radio" class="R" name="mygender"> Male <input type="radio" class="R"  name="mygender"> Female  <input type="radio" class="R" name="mygender"> Others
+                
+                </div>
+                <div class="data">
+                    <!-- <label>Contact Number</label>
+                    <input class="field" id="phone" type="Number" required placeholder="Contact no.">
+                </div>
+                <div class="data">
+                    <label>Age</label>
+                    <input class="field" id="age" type="number" required placeholder="Your age">
+                </div> -->
+                <div class="btn">
+                    <div class="inner">
+                        <button type="submit" required>
+                            SIGNIN
+                        </button>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</body>
+</html>
